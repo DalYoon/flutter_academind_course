@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-
 import "./products_manager.dart";
 
 void main() => runApp(MyApp());
@@ -10,15 +9,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text("EasyList"),
-          ),
-          body: ProductsMannager("Adventure Time")),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("EasyList"),
+            ),
+            body: ProductsManager("Adventure Time")),
+      );
 }

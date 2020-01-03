@@ -1,23 +1,12 @@
 import "package:flutter/material.dart";
+import "./productCard.dart";
 
 class Products extends StatelessWidget {
+  Products(this.products);
   final List<String> products;
 
-  Products(this.products);
-
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: products
-          .map((product) => Card(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset("assets/jake1.png"),
-                    Text(product)
-                  ],
-                ),
-              ))
-          .toList(),
-    );
-  }
+  Widget build(BuildContext context) => Column(
+        children: products.map((product) => ProductCard(product)).toList(),
+      );
 }
