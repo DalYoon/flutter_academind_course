@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
         body: Card(
           child: Column(
             children: <Widget>[
-              // Image(),
+              Image.asset("assets/nice.png"),
               Text("Food Paradise")
             ],
           ),
