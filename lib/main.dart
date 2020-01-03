@@ -2,7 +2,14 @@ import "package:flutter/material.dart";
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> _products = ["Adventure Time"];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,14 +19,25 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: <Widget>[
-              Card(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset("assets/jake1.png"),
-                    Text("Adventure Time")
-                  ],
+              Container(
+                margin: EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  child: Text("Add Product"),
+                  onPressed: () => {},
                 ),
               ),
+              Column(
+                children: _products
+                    .map((product) => Card(
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset("assets/jake1.png"),
+                              Text(product)
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              )
             ],
           )),
     );
