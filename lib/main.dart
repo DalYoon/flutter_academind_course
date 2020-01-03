@@ -10,7 +10,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String> _products = ["Adventure Time"];
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             title: Text("EasyList"),
           ),
-          body: ProductsMannager()),
+          body: ProductsMannager("Adventure Time")),
     );
   }
 }
