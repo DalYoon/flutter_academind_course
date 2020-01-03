@@ -10,6 +10,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   List<String> _products = ["Adventure Time"];
 
+  void addProduct() {
+    setState(() {
+      _products.add("Jake");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +29,7 @@ class _MyAppState extends State<MyApp> {
                 margin: EdgeInsets.all(10.0),
                 child: RaisedButton(
                   child: Text("Add Product"),
-                  onPressed: () => {},
+                  onPressed: () => addProduct(),
                 ),
               ),
               Column(
