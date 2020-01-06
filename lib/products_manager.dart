@@ -19,12 +19,12 @@ class _ProductsManagerState extends State<ProductsManager> {
     super.initState();
   }
 
-  void addProduct() => setState(() => _products.add("Jake"));
+  void _addProduct() => setState(() => _products.add("Jake"));
 
   @override
   Widget build(BuildContext context) => Column(
         children: <Widget>[
-          AddButton(onPress: addProduct),
+          AddButton(onPress: _addProduct),
           Products(_products)
         ],
       );
