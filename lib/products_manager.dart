@@ -24,7 +24,7 @@ class _ProductsManagerState extends State<ProductsManager> {
   @override
   Widget build(BuildContext context) => Column(
         children: <Widget>[
-          AddButton(addProduct, "Add Product"),
+          AddButton(onPress: addProduct),
           Products(_products)
         ],
       );

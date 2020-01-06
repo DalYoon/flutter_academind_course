@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 class AddButton extends StatelessWidget {
-  AddButton(this.onPress, this.title);
+  AddButton({this.onPress, this.title: "Add Product"});
   final Function onPress;
   final String title;
 

@@ -11,9 +11,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) => MaterialApp(
+        theme: ThemeData(
+            brightness: Brightness.dark,
+            primarySwatch: Colors.lime,
+            ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("EasyList"),
+              title: Text("JakeList"),
             ),
             body: ProductsManager("Adventure Time")),
       );
